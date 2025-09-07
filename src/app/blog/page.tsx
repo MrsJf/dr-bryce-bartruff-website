@@ -247,7 +247,7 @@ export default function BlogPage() {
                   <div id="article2-content" className="hidden mt-6 pt-6 border-t border-gray-200">
                     <div className="prose max-w-none">
                       <p className="mb-4 italic bg-gray-50 p-4 rounded">
-                        <strong>Q:</strong> One of my friends just purchased a new home. I'd like to do the same, but I find it difficult to meet my basic expenses. She said her secret was sticking to her budget. Unfortunately, budgets never seem to work for me. No matter how hard I try, they aren't realistic. What suggestions do you have for making a workable budget that reflects my actual needs?
+                        <strong>Q:</strong> One of my friends just purchased a new home. I&apos;d like to do the same, but I find it difficult to meet my basic expenses. She said her secret was sticking to her budget. Unfortunately, budgets never seem to work for me. No matter how hard I try, they aren&apos;t realistic. What suggestions do you have for making a workable budget that reflects my actual needs?
                       </p>
                       
                       <p className="mb-4">
