@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 import BookCard from '@/components/ui/BookCard';
 import PhotoCarousel from '@/components/ui/PhotoCarousel';
 import { books } from '@/data/books';
-import { authorInfo } from '@/data/author';
 
 export default function Home() {
   const featuredBooks = books.filter(book => book.featured).slice(0, 3);
