@@ -8,7 +8,7 @@ export const authorInfo: AuthorInfo = {
     'Author of 6 Published Books',
     'National Speaker & Educator',
     'Expert in Biblical Financial Stewardship',
-    'Former Manager of Education & Training, American Missionary Fellowship',
+    'Former Manager of Education & Training, InFaith',
     '1993 Course of the Year Award Winner from ACCESS'
   ],
   socialMedia: {

@@ -54,5 +54,23 @@ export const events: Event[] = [
     description: 'A full-day intensive program combining keynote presentations, interactive workshops, and networking opportunities with like-minded individuals.',
     registrationUrl: 'https://example.com/register/event-6',
     type: 'seminar'
+  },
+  {
+    id: 'event-7',
+    title: 'Biblical Financial Stewardship Workshop',
+    date: '2025-09-09',
+    location: 'House of Refuge, Sunnyslope, AZ',
+    description: 'Join us for an inspiring workshop on biblical principles of financial stewardship and generosity. Learn practical strategies for managing money according to God\'s design.',
+    registrationUrl: '',
+    type: 'workshop'
+  },
+  {
+    id: 'event-8',
+    title: 'Biblical Financial Stewardship Workshop',
+    date: '2025-09-16',
+    location: 'House of Refuge, Sunnyslope, AZ',
+    description: 'Join us for an inspiring workshop on biblical principles of financial stewardship and generosity. Learn practical strategies for managing money according to God\'s design.',
+    registrationUrl: '',
+    type: 'workshop'
   }
 ];
