@@ -55,7 +55,7 @@ export const books: Book[] = [
     id: 'book-6',
     title: 'Here Am I Send Me: The Recruitment, Management, and Training of Volunteers',
     description: 'Winner of the 1993 Course of the Year Award! This comprehensive guide helps churches maximize their most valuable resource - their people. Learn proven strategies for recruiting, managing, and training volunteers effectively. Discover how to lead with a servant\'s heart and create ministry opportunities that bring joy and spiritual blessing to everyone involved.',
-    amazonUrl: 'https://www.amazon.com/Here-Am-Send-Me-Recruitment/dp/0899570569',
+    amazonUrl: 'https://www.amazon.com/Here-Send-Recruitment-Management-Volunteers/dp/089900606X',
     coverImage: '/images/books/book-6-cover.jpg',
     publishDate: '1993-05-01',
     genre: 'Church Leadership',

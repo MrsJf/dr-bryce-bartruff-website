@@ -63,7 +63,8 @@ export default function BookCard({ book, featured = false }: BookCardProps) {
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors whitespace-nowrap"
               >
-                {book.amazonUrl.includes('amazon.com') ? 'Buy on Amazon' : 'Buy from Publisher'}
+                {book.amazonUrl.includes('amazon.com') ? 'Buy on Amazon' : 
+                 book.amazonUrl.includes('thriftbooks.com') ? 'Buy on Thrift Books' : 'Buy from Publisher'}
               </a>
             </div>
           </div>
