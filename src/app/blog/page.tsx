@@ -13,7 +13,7 @@ import BudgetReviewSystem from '@/components/tools/BudgetReviewSystem';
 import MoneyFindingStrategies from '@/components/tools/MoneyFindingStrategies';
 
 export default function BlogPage() {
-  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
+  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 4);
   const recentPosts = blogPosts.filter(post => !post.featured).slice(0, 6);
   const [openTool, setOpenTool] = useState<string | null>(null);
 
