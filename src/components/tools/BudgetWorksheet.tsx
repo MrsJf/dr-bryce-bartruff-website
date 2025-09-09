@@ -83,7 +83,7 @@ export default function BudgetWorksheet() {
   const categoryTotals = getExpensesByCategory();
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="w-full">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Budget Worksheet</h2>
         <p className="text-lg text-gray-600">

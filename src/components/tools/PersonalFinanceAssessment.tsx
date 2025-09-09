@@ -98,7 +98,7 @@ export default function PersonalFinanceAssessment() {
   const interpretation = results ? getScoreInterpretation(results.averageScore) : null;
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="w-full">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Personal Finance Assessment</h2>
         <p className="text-lg text-gray-600">
@@ -129,10 +129,7 @@ export default function PersonalFinanceAssessment() {
                 max="10"
                 value={scores[category.id] || 1}
                 onChange={(e) => updateScore(category.id, parseInt(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                style={{
-                  background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${((scores[category.id] || 1) - 1) * 11.11}%, #e5e7eb ${((scores[category.id] || 1) - 1) * 11.11}%, #e5e7eb 100%)`
-                }}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
                 <span>Poor (1)</span>

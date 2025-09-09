@@ -110,7 +110,7 @@ export default function BudgetReviewSystem() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <div className="w-full">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Budget Review System</h2>
         <p className="text-lg text-gray-600">
@@ -320,7 +320,7 @@ export default function BudgetReviewSystem() {
             </div>
             <div className="text-sm text-gray-600">Categories Needing Attention</div>
             <div className="text-xs text-gray-500 mt-1">
-              >10% variance from budget
+              &gt;10% variance from budget
             </div>
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function BudgetReviewSystem() {
             
             {reviewItems.filter(item => (item.actualExpense - item.currentBudget) > item.currentBudget * 0.2).length > 0 && (
               <div className="text-yellow-700">
-                • Categories with >20% overspend need immediate attention for next month's budget.
+                • Categories with &gt;20% overspend need immediate attention for next month's budget.
               </div>
             )}
             

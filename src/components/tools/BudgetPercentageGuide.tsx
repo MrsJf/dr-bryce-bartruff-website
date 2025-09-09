@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 interface BudgetGuideline {
   category: string;
-  lowIncome: number;  // <$30k
+  lowIncome: number;  // &lt;$30k
   midIncome: number;  // $30k-$75k
-  highIncome: number; // >$75k
+  highIncome: number; // &gt;$75k
   description: string;
 }
 
@@ -124,15 +124,15 @@ export default function BudgetPercentageGuide() {
 
   const getIncomeLabel = () => {
     switch (incomeCategory) {
-      case 'low': return 'Lower Income (<$30k annually)';
+      case 'low': return 'Lower Income (&lt;$30k annually)';
       case 'mid': return 'Middle Income ($30k-$75k annually)';
-      case 'high': return 'Higher Income (>$75k annually)';
+      case 'high': return 'Higher Income (&gt;$75k annually)';
       default: return 'Enter your income to see guidelines';
     }
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="w-full">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Budget Percentage Guide</h2>
         <p className="text-lg text-gray-600">
