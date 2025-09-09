@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2025-09-09
+
+### ✨ Content Updates
+- **Removed Fictitious Events** - Cleaned up events page to show only authentic House of Refuge workshops (Sept 9 & 16, 2025)
+- **Added Two Featured Leadership Articles**:
+  - "The ABCs of Leadership" - Comprehensive guide covering Inner Qualities, Attitude, Communication Skills, and Goal Orientation
+  - "The ABDs of Building Good Working Relationships" - A-Z strategies for workplace relationships and conflict resolution
+- **Updated Author Credentials**:
+  - Changed to "Author of 8 Published Books" (from 6)
+  - Updated InFaith position to "Former Senior Director and COO" 
+  - Removed 1993 ACCESS Course of the Year award
+- **Revised Speaking Topics** - Limited to 6 authentic topics:
+  - Financial Stability Made Easy
+  - Biblical Financial Stewardship Workshop
+  - Become the Person You Were Meant to Be
+  - Stewardship
+  - The Power of Servant Leadership
+  - Fundamental Leadership Skills
+
+### 🔧 Technical Improvements
+- **Removed Publication Metadata** - Cleaned up insights page by removing publication dates and sources from articles
+- **Fixed Featured Articles Display** - Increased limit from 3 to 4 articles to show all featured content
+- **Enhanced Content Organization** - Proper categorization and tagging of new articles
+
+### 🐛 Critical Bug Fixes
+- **Resolved Deployment Issues** - Fixed Vercel build failures caused by backup files and JSX syntax errors
+- **Added Deployment Safeguards**:
+  - Created `test-build.bat` script for local testing
+  - Added comprehensive `DEPLOYMENT_CHECKLIST.md`
+  - Updated `.gitignore` to prevent backup file commits
+  - Established best practices documentation
+
+### 🛠 Development Enhancements  
+- **Improved Build Process** - Local build testing now mandatory before deployment
+- **Better Error Prevention** - Automated safeguards against common deployment issues
+- **Enhanced Documentation** - Clear guidelines for future changes and maintenance
+
+---
+
 ## [2.0.0] - 2025-09-09
 
 ### ✨ Major Features Added
@@ -81,8 +120,10 @@ src/
 - **Interactive Tools:** 6
 - **Content Pages:** 25+
 - **Books Featured:** 6
-- **Articles Published:** 8
-- **Lines of Code:** ~3,500+
+- **Articles Published:** 10 (8 financial + 2 leadership)
+- **Featured Articles:** 4
+- **Speaking Topics:** 6 (authentic only)
+- **Lines of Code:** ~3,800+
 
 ## 🛠 Technology Stack
 
@@ -98,5 +139,5 @@ src/
 For updates, modifications, or technical support, this project is maintained with Claude Code assistance. All changes are tracked through Git commits and this changelog.
 
 **Last Updated:** September 9, 2025
-**Current Version:** 2.0.0
+**Current Version:** 2.1.0
 **Status:** ✅ Live and Fully Functional

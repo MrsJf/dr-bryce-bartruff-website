@@ -1,6 +1,6 @@
 # Dr. Bryce Bartruff Author Website
 
-> **Version 2.0.0** | Last Updated: September 9, 2025 | Status: ✅ Live & Fully Functional
+> **Version 2.1.0** | Last Updated: September 9, 2025 | Status: ✅ Live & Fully Functional
 
 Professional author website featuring interactive financial tools, books, articles, and speaking engagements.
 
@@ -15,11 +15,12 @@ Professional author website featuring interactive financial tools, books, articl
 - **Money-Finding Strategies** - 50+ actionable money-saving tips
 
 ### 📚 **Content Library**
-- 8 authentic financial articles by Dr. Bartruff
-- 6 published books with purchase links
-- Professional author bio and credentials
-- Speaking engagement calendar
-- Contact information and social media
+- 10 authentic articles (8 financial + 2 leadership)
+- 4 featured articles including new leadership content
+- 6 published books with purchase links  
+- Updated author bio and credentials (8 books, Senior Director & COO)
+- 6 authentic speaking topics only
+- Authentic upcoming events (House of Refuge workshops)
 
 ## 🚀 Quick Start
 
@@ -87,4 +88,4 @@ This project is maintained with Claude Code assistance. All changes are tracked 
 
 **Live Site:** [Deployed via Vercel]
 **Repository:** GitHub (auto-sync)
-**Last Deploy:** September 9, 2025
+**Last Deploy:** September 9, 2025 (v2.1.0)
