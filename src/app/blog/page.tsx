@@ -61,11 +61,6 @@ export default function BlogPage() {
                     <article className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden h-full">
                       <div className="p-6 h-full flex flex-col">
                         <div className="flex-1">
-                          <div className="flex items-center text-sm text-gray-500 mb-3">
-                            <time>{formatDate(post.publishDate)}</time>
-                            <span className="mx-2">•</span>
-                            <span>{getReadingTime(post.content)}</span>
-                          </div>
                           
                           <h3 className={`font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors ${
                             index === 0 ? 'text-2xl' : 'text-xl'
@@ -117,20 +112,6 @@ export default function BlogPage() {
               {recentPosts.map((post) => (
                 <article key={post.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
                   <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <time>{formatDate(post.publishDate)}</time>
-                      <span className="mx-2">•</span>
-                      {post.isVideo ? (
-                        <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                          Video Insight
-                        </span>
-                      ) : (
-                        <span>{getReadingTime(post.content)}</span>
-                      )}
-                    </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
                       {post.isVideo ? (

@@ -193,30 +193,30 @@ export default function EventsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
+              [
                 {
-                  title: "Transforming Limiting Beliefs",
-                  description: "Learn to identify and overcome the mental barriers holding you back from achieving your full potential."
+                  title: "Financial Stability Made Easy",
+                  description: "Practical strategies and biblical principles for achieving lasting financial stability and peace of mind."
                 },
                 {
-                  title: "Leadership in Uncertainty",
-                  description: "Develop the skills to lead with confidence and inspire others during times of change and challenge."
+                  title: "Biblical Financial Stewardship Workshop",
+                  description: "Discover God's design for managing money and resources according to biblical principles."
                 },
                 {
-                  title: "Building Unshakeable Resilience",
-                  description: "Discover strategies to bounce back from setbacks stronger and maintain momentum toward your goals."
+                  title: "Become the Person You Were Meant to Be",
+                  description: "Unlock your God-given potential and align your life with your divine purpose and calling."
                 },
                 {
-                  title: "The Power of Persistent Action",
-                  description: "Master the art of consistent progress and learn how small daily actions lead to extraordinary results."
+                  title: "Stewardship",
+                  description: "Understanding our role as faithful stewards of the resources, talents, and opportunities God has entrusted to us."
                 },
                 {
-                  title: "Creating Your Success Blueprint",
-                  description: "Design a personalized roadmap for achieving your biggest dreams and most important goals."
+                  title: "The Power of Servant Leadership",
+                  description: "Lead with humility, service, and Christ-like character to inspire and transform others."
                 },
                 {
-                  title: "Mindset Mastery",
-                  description: "Rewire your thinking patterns and develop the mental frameworks used by high achievers."
+                  title: "Fundamental Leadership Skills",
+                  description: "Essential leadership principles and practical skills for effective leadership in any context."
                 }
               ].map((topic, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
