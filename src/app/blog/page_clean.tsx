@@ -1,21 +1,12 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 import { blogPosts } from '@/data/blog';
-import ToolModal from '@/components/tools/ToolModal';
-import PersonalFinanceAssessment from '@/components/tools/PersonalFinanceAssessment';
-import BudgetWorksheet from '@/components/tools/BudgetWorksheet';
-import CashExpenseTracker from '@/components/tools/CashExpenseTracker';
-import BudgetPercentageGuide from '@/components/tools/BudgetPercentageGuide';
-import BudgetReviewSystem from '@/components/tools/BudgetReviewSystem';
-import MoneyFindingStrategies from '@/components/tools/MoneyFindingStrategies';
 
 export default function BlogPage() {
   const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
   const recentPosts = blogPosts.filter(post => !post.featured).slice(0, 6);
-  const [openTool, setOpenTool] = useState<string | null>(null);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -215,10 +206,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Personal Finance Assessment</h4>
                   </div>
                   <p className="text-gray-800 mb-4">Rate your financial habits across 12 key areas using interactive sliders. Get personalized feedback and improvement suggestions.</p>
-                  <button 
-                    onClick={() => setOpenTool('assessment')}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -236,10 +224,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Complete Budget Worksheet</h4>
                   </div>
                   <p className="text-gray-800 mb-4">Comprehensive monthly budget with income, expenses across 10 categories, and automatic calculations to show if you're in the black or red.</p>
-                  <button 
-                    onClick={() => setOpenTool('budget')}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -257,10 +242,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Budget Percentage Guide</h4>
                   </div>
                   <p className="text-gray-800 mb-4">See recommended spending percentages for different income levels. Compare your budget to proven guidelines.</p>
-                  <button 
-                    onClick={() => setOpenTool('percentage')}
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -278,10 +260,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Cash Expense Tracker</h4>
                   </div>
                   <p className="text-gray-800 mb-4">Track your daily cash expenses to solve "the case of the missing cash." Studies show this reduces spending by 30%!</p>
-                  <button 
-                    onClick={() => setOpenTool('tracker')}
-                    className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -299,10 +278,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Budget Review System</h4>
                   </div>
                   <p className="text-gray-800 mb-4">The proven 5-column method to create budgets that actually work. Compare planned vs. actual spending and adjust accordingly.</p>
-                  <button 
-                    onClick={() => setOpenTool('review')}
-                    className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -320,10 +296,7 @@ export default function BlogPage() {
                     <h4 className="text-lg font-semibold text-gray-900">Money-Finding Strategies</h4>
                   </div>
                   <p className="text-gray-800 mb-4">Interactive checklist of 50+ money-saving tips across 8 categories, plus calculate how small daily savings add up annually.</p>
-                  <button 
-                    onClick={() => setOpenTool('strategies')}
-                    className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded transition-colors"
-                  >
+                  <button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded transition-colors">
                     Use Tool
                   </button>
                 </div>
@@ -421,55 +394,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-
-      {/* Tool Modals */}
-      <ToolModal
-        isOpen={openTool === 'assessment'}
-        onClose={() => setOpenTool(null)}
-        title="Personal Finance Assessment"
-      >
-        <PersonalFinanceAssessment />
-      </ToolModal>
-
-      <ToolModal
-        isOpen={openTool === 'budget'}
-        onClose={() => setOpenTool(null)}
-        title="Complete Budget Worksheet"
-      >
-        <BudgetWorksheet />
-      </ToolModal>
-
-      <ToolModal
-        isOpen={openTool === 'tracker'}
-        onClose={() => setOpenTool(null)}
-        title="Cash Expense Tracker"
-      >
-        <CashExpenseTracker />
-      </ToolModal>
-
-      <ToolModal
-        isOpen={openTool === 'percentage'}
-        onClose={() => setOpenTool(null)}
-        title="Budget Percentage Guide"
-      >
-        <BudgetPercentageGuide />
-      </ToolModal>
-
-      <ToolModal
-        isOpen={openTool === 'review'}
-        onClose={() => setOpenTool(null)}
-        title="Budget Review System"
-      >
-        <BudgetReviewSystem />
-      </ToolModal>
-
-      <ToolModal
-        isOpen={openTool === 'strategies'}
-        onClose={() => setOpenTool(null)}
-        title="Money-Finding Strategies"
-      >
-        <MoneyFindingStrategies />
-      </ToolModal>
     </Layout>
   );
 }
