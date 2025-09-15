@@ -38,7 +38,7 @@ export default function BlogPage() {
         {/* Header Section */}
         <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Insights & Articles</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Resources & Articles</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover practical strategies, inspiring stories, and actionable insights to help you 
               unlock your potential and create the life you desire.

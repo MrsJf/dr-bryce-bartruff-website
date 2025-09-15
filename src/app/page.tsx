@@ -18,7 +18,7 @@ export default function Home() {
                 Transforming Lives Through Words
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Author of 6 books, helping thousands unlock their potential through powerful insights and practical wisdom.
+                Author of 8 books, helping thousands unlock their potential through powerful insights and practical wisdom.
               </p>
               <div className="space-x-4">
                 <Link

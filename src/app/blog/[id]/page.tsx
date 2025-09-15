@@ -31,6 +31,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     return `${readingTime} min read`;
   };
 
+  const renderContent = (content: string) => {
+    // Convert markdown-style formatting to HTML
+    return content
+      .replace(/## (.*?)(\n|$)/g, '<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">$1</h2>$2') // ## Header to <h2>
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // **text** to <strong>text</strong>
+      .replace(/\*(.*?)\*/g, '<em>$1</em>') // *text* to <em>text</em>
+      .replace(/\n\n/g, '</p><p>') // Double newlines to paragraph breaks
+      .replace(/\n/g, '<br/>'); // Single newlines to line breaks
+  };
+
   const relatedPosts = blogPosts
     .filter(p => p.id !== post.id && p.tags.some(tag => post.tags.includes(tag)))
     .slice(0, 3);
@@ -62,8 +72,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center justify-center text-gray-500 text-sm">
                 <span>By {post.author}</span>
                 <span className="mx-3">•</span>
-                <time>{formatDate(post.publishDate)}</time>
-                <span className="mx-3">•</span>
                 <span>{getReadingTime(post.content)}</span>
               </div>
             </div>
@@ -74,16 +82,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <article className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
-              {/* This is placeholder content - in a real blog, you'd have full article content */}
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {post.content}
-              </p>
-              
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                This is where the full article content would appear. In a complete implementation, 
-                you would have the full blog post content stored in your data or fetched from a 
-                content management system.
-              </p>
+              <div
+                className="text-lg text-gray-700 leading-relaxed mb-6"
+                dangerouslySetInnerHTML={{ __html: `<p>${renderContent(post.content)}</p>` }}
+              />
               
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Key Takeaways</h2>
               
@@ -171,8 +173,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   >
                     <article className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
                       <div className="flex items-center text-sm text-gray-500 mb-3">
-                        <time>{formatDate(relatedPost.publishDate)}</time>
-                        <span className="mx-2">•</span>
                         <span>{getReadingTime(relatedPost.content)}</span>
                       </div>
                       

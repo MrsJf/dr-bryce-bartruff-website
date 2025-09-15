@@ -11,7 +11,7 @@ export default function Header() {
     { name: 'Books', href: '/books' },
     { name: 'About', href: '/about' },
     { name: 'Events', href: '/events' },
-    { name: 'Insights', href: '/blog' },
+    { name: 'Resources', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 

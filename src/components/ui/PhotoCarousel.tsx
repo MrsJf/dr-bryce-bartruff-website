@@ -100,10 +100,10 @@ export default function PhotoCarousel() {
         </div>
       )}
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Invisible but functional */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200 z-10"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-0 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200 z-10 opacity-0"
         aria-label="Previous image"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@ export default function PhotoCarousel() {
 
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200 z-10"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-0 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-200 z-10 opacity-0"
         aria-label="Next image"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
