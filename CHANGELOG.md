@@ -138,6 +138,48 @@ src/
 
 For updates, modifications, or technical support, this project is maintained with Claude Code assistance. All changes are tracked through Git commits and this changelog.
 
-**Last Updated:** September 9, 2025
-**Current Version:** 2.1.0
+## [2.2.0] - 2025-09-15
+
+### 🎨 Major Content & UI Improvements
+- **Updated Author Bio** - Changed from "author of 6 books" to "author of 8 books" on main page
+- **Enhanced Photo Carousel** - Made navigation arrows invisible while preserving full functionality (dots remain visible)
+- **Navigation Rebranding** - Renamed "Insights" to "Resources" throughout entire site (header, footer, blog page)
+
+### 📝 Article Formatting Overhaul
+- **ABC Articles Enhancement** - Applied proper formatting to leadership articles:
+  - **"The ABCs of Leadership"** - Added bold letters (A-Z) with italicized sub-points
+  - **"The ABCs of Building Good Working Relationships"** - Fixed title (ABDs→ABCs) and applied A-Z bold formatting
+- **Q&A Articles Standardization** - Updated 7 articles with professional Q./A. format:
+  - Smart Food Shopping: 12 Practical Tips to Cut Your Grocery Bill
+  - The New Graduate's Guide to Financial Planning
+  - Credit Card Consolidation: A Smart Strategy or Dangerous Trap?
+  - Finding Hidden Money: Small Daily Savings That Add Up to Big Dreams
+  - From Red to Black: A Four-Step Plan to Eliminate Debt and Build Wealth
+  - The Case of the Missing Cash
+  - 403(b) Investment Strategy: How to Choose the Right Retirement Fund
+- **Narrative Article Polish** - Fixed paragraph structure in "What Really Counts!" to match original formatting
+
+### 🔧 Technical Enhancements
+- **Markdown Rendering System** - Built custom markdown processor for articles:
+  - **Bold text** (`**text**` → `<strong>text</strong>`)
+  - *Italic text* (`*text*` → `<em>text</em>`)
+  - ## Headers (`## Title` → styled `<h2>` elements)
+  - Proper paragraph breaks (`\n\n` → `<p>` tags)
+- **Clean Article Display** - Removed placeholder text and improved content presentation
+- **Date Removal** - Eliminated publication dates from all article detail views (kept author & reading time)
+
+### 🐛 Bug Fixes
+- Fixed markdown not rendering as HTML (was showing raw `**Q.**` instead of bold text)
+- Corrected paragraph breaks not displaying properly in narrative articles
+- Removed development placeholder content from article template
+
+### 📊 Content Statistics Update
+- **Total Articles:** 11 (1 narrative + 2 ABC format + 7 Q&A format + 1 video)
+- **Featured Articles:** 4 (properly formatted)
+- **Formatted Articles:** 10 of 11 (all except video content)
+
+---
+
+**Last Updated:** September 15, 2025
+**Current Version:** 2.2.0
 **Status:** ✅ Live and Fully Functional
