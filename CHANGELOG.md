@@ -29,6 +29,9 @@ All notable changes to this project will be documented in this file.
 - **Temporary solution** - Works immediately while waiting for traffic to justify API integration
 - **Future-ready** - Easy to upgrade to Brevo or other service later
 
+### 🐛 Bug Fixes
+- **Fixed Footer build error** - Added `'use client'` directive to Footer component to resolve React hooks usage error
+
 ---
 
 ## [2.2.1] - 2025-09-21
@@ -233,26 +236,41 @@ For updates, modifications, or technical support, this project is maintained wit
 
 ---
 
-## 📋 Future Improvements (To-Do List)
+## 📋 Future Improvements (Left To-Do List)
 
-### High Priority
-- **Newsletter Integration** - Replace mailto subscription with Brevo API integration
+### ⚠️ High Priority - Replace Temporary mailto Solutions
+
+**IMPORTANT:** Both the contact form and newsletter subscription currently use temporary mailto: solutions. These work but require manual processing of emails. Upgrade to automated solutions when traffic increases.
+
+#### 1. Newsletter Subscription System (Footer Form)
+- **Current Status**: Uses mailto - opens email client with subscription request
+- **Action Required**: Replace with Brevo API integration
   - Set up Brevo account (free tier: unlimited contacts, 300 emails/day)
-  - Integrate API with footer newsletter form
-  - Add email list management
-  - Create newsletter templates
+  - Integrate Brevo API with footer newsletter form
+  - Add automated email list management
+  - Create professional newsletter templates
+  - Set up welcome email automation
+- **Timeline**: Upgrade when you're ready to send regular newsletters
 
-- **Contact Form Email Service** - Replace mailto with proper email service
-  - Consider Formspree, Brevo, or SendGrid
-  - Implement server-side email handling
+#### 2. Contact Form Email Service
+- **Current Status**: Uses mailto - opens email client with pre-filled message
+- **Action Required**: Replace with proper email service
+  - Consider Formspree (easiest), Brevo, or SendGrid
+  - Implement server-side email handling via Next.js API route
   - Add form submission notifications
-  - Store contact form submissions
+  - Store contact form submissions in database (optional)
+  - Add confirmation email to sender
+- **Timeline**: Upgrade when receiving multiple contacts per day
 
 ### Medium Priority
-- Consider adding email automation for newsletter subscribers
-- Add analytics tracking for form submissions
-- Implement CAPTCHA for spam prevention
+- Add email automation workflows for newsletter subscribers
+- Implement analytics tracking for form submissions
+- Add CAPTCHA or reCAPTCHA for spam prevention
+- Create email templates for different inquiry types
+- Set up automated responses for common questions
 
 ### Notes
-- Current mailto approach works but requires manual email list management
-- Upgrade to API solution when regular newsletter traffic begins
+- ✅ Current mailto approach is functional and free
+- ⚠️ Requires manual email management and list building
+- 🎯 Upgrade to API solution when regular newsletter or high contact volume begins
+- 💰 All recommended services have generous free tiers suitable for getting started
