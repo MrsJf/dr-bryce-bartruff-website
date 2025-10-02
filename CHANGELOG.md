@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.2] - 2025-10-02
+
+### 📧 Contact Form Update
+- **Implemented mailto functionality** - Contact form now uses mailto: links to open user's email client
+- **Pre-filled email data** - Subject line includes inquiry type and user's subject
+- **Email body includes** - User's name, email address, and message content
+- **Benefits:**
+  - Free solution requiring no API integration
+  - No server-side email processing needed
+  - Works with any email client
+  - Easy to switch to API solution later if needed
+
+---
+
+## [2.2.1] - 2025-09-21
+
+### 🌐 Domain Configuration Fix
+- **RESOLVED:** Root domain access issue where `brycebartruff.com` was timing out
+- **DNS Configuration Update:**
+  - Changed A Record from `76.76.19.61` to `216.198.79.65` (working Vercel IP)
+  - Kept existing CNAME Record: `www` → `8f6ed6ed3e870db3.vercel-dns-017.com`
+- **Result:** Both domains now fully functional:
+  - ✅ `brycebartruff.com` - Working
+  - ✅ `www.brycebartruff.com` - Working
+- **Vercel Status:** Both domains showing "Valid Configuration"
+
+### 📋 Documentation Consolidation
+- **Cleaned up scattered documentation files** - All changes now tracked in CHANGELOG.md only
+- **Deployment info integrated** - Domain and deployment details added to main changelog
+
+---
+
 ## [2.1.0] - 2025-09-09
 
 ### ✨ Content Updates
@@ -180,6 +212,6 @@ For updates, modifications, or technical support, this project is maintained wit
 
 ---
 
-**Last Updated:** September 15, 2025
-**Current Version:** 2.2.0
+**Last Updated:** October 2, 2025
+**Current Version:** 2.2.2
 **Status:** ✅ Live and Fully Functional
