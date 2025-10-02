@@ -12,6 +12,7 @@ export default function ContactPage() {
     message: '',
     inquiryType: 'general'
   });
+  const [showFallback, setShowFallback] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,8 +22,17 @@ export default function ContactPage() {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
 
-    // Open user's email client
-    window.location.href = mailtoLink;
+    // Try to open user's email client
+    try {
+      window.location.href = mailtoLink;
+
+      // Show fallback message after a brief delay in case mailto doesn't work
+      setTimeout(() => {
+        setShowFallback(true);
+      }, 1000);
+    } catch (error) {
+      setShowFallback(true);
+    }
 
     // Clear form
     setFormData({
@@ -75,7 +85,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                         placeholder="Your full name"
                       />
                     </div>
@@ -90,7 +100,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -105,7 +115,7 @@ export default function ContactPage() {
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="speaking">Speaking Engagement</option>
@@ -126,7 +136,7 @@ export default function ContactPage() {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                       placeholder="Brief subject line"
                     />
                   </div>
@@ -142,7 +152,7 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900 bg-white"
                       placeholder="Please share your message, question, or details about your speaking event..."
                     />
                   </div>
@@ -153,6 +163,27 @@ export default function ContactPage() {
                   >
                     Send Message
                   </button>
+
+                  {/* Fallback message if mailto doesn't work */}
+                  {showFallback && (
+                    <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                      <p className="text-sm text-gray-700 mb-2">
+                        <strong>Email client not opening?</strong> No problem! You can email me directly at:
+                      </p>
+                      <a
+                        href="mailto:brycebartruff@me.com"
+                        className="text-blue-600 hover:text-blue-800 font-medium text-lg"
+                      >
+                        brycebartruff@me.com
+                      </a>
+                      <button
+                        onClick={() => setShowFallback(false)}
+                        className="ml-4 text-sm text-gray-500 hover:text-gray-700 underline"
+                      >
+                        Dismiss
+                      </button>
+                    </div>
+                  )}
                 </form>
               </div>
 
