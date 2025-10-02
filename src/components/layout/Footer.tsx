@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { authorInfo } from '@/data/author';
 import { useState } from 'react';
