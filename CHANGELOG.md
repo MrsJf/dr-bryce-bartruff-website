@@ -14,6 +14,14 @@ All notable changes to this project will be documented in this file.
   - Works with any email client
   - Easy to switch to API solution later if needed
 
+### 🎨 Contact Form UI Improvements
+- **Fixed text visibility** - Added explicit text color styling (`text-gray-900 bg-white`) to all form inputs
+- **Cross-browser compatibility** - Resolved light gray text issue in Firefox and other browsers
+- **Fallback solution** - Added fallback message for users whose email client doesn't open
+  - Displays email address directly after 1 second
+  - Includes dismiss button for better UX
+  - Ensures all users can contact regardless of browser settings
+
 ---
 
 ## [2.2.1] - 2025-09-21
