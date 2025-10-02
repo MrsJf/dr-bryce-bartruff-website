@@ -22,6 +22,13 @@ All notable changes to this project will be documented in this file.
   - Includes dismiss button for better UX
   - Ensures all users can contact regardless of browser settings
 
+### 📬 Newsletter Subscription Functionality
+- **Implemented mailto for newsletter signup** - Footer subscription form now functional
+- **Email collection** - Opens email client with subscription request
+- **Subject line**: "Newsletter Subscription Request"
+- **Temporary solution** - Works immediately while waiting for traffic to justify API integration
+- **Future-ready** - Easy to upgrade to Brevo or other service later
+
 ---
 
 ## [2.2.1] - 2025-09-21
@@ -223,3 +230,29 @@ For updates, modifications, or technical support, this project is maintained wit
 **Last Updated:** October 2, 2025
 **Current Version:** 2.2.2
 **Status:** ✅ Live and Fully Functional
+
+---
+
+## 📋 Future Improvements (To-Do List)
+
+### High Priority
+- **Newsletter Integration** - Replace mailto subscription with Brevo API integration
+  - Set up Brevo account (free tier: unlimited contacts, 300 emails/day)
+  - Integrate API with footer newsletter form
+  - Add email list management
+  - Create newsletter templates
+
+- **Contact Form Email Service** - Replace mailto with proper email service
+  - Consider Formspree, Brevo, or SendGrid
+  - Implement server-side email handling
+  - Add form submission notifications
+  - Store contact form submissions
+
+### Medium Priority
+- Consider adding email automation for newsletter subscribers
+- Add analytics tracking for form submissions
+- Implement CAPTCHA for spam prevention
+
+### Notes
+- Current mailto approach works but requires manual email list management
+- Upgrade to API solution when regular newsletter traffic begins
