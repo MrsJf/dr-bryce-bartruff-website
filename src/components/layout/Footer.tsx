@@ -2,11 +2,9 @@
 
 import Link from 'next/link';
 import { authorInfo } from '@/data/author';
-import { useState } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState('');
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -77,32 +75,17 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
             <p className="text-gray-300 mb-4 text-sm">
-              Subscribe to receive updates about new books, events, and insights.
+              Subscribe to receive updates, get our free workbook, and access exclusive resources.
             </p>
-            <form
-              className="space-y-2"
-              onSubmit={(e) => {
-                e.preventDefault();
-                const mailtoLink = `mailto:brycebartruff@me.com?subject=${encodeURIComponent('Newsletter Subscription Request')}&body=${encodeURIComponent(`Please add this email to the newsletter list:\n\n${email}`)}`;
-                window.location.href = mailtoLink;
-                setEmail('');
-              }}
+            <Link
+              href="/blog#subscribe"
+              className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md transition-colors text-center"
             >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-              />
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+              Subscribe Now
+            </Link>
+            <p className="text-gray-400 text-xs mt-2">
+              Get your FREE Financial Stability workbook!
+            </p>
           </div>
         </div>
 
