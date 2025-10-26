@@ -4,7 +4,9 @@ import EndorsementCarousel from '@/components/ui/EndorsementCarousel';
 import { books } from '@/data/books';
 
 export default function BooksPage() {
-  const featuredBooks = books.filter(book => book.featured);
+  const featuredBooks = books
+    .filter(book => book.featured)
+    .sort((a, b) => (a.order || 999) - (b.order || 999));
   const otherBooks = books.filter(book => !book.featured);
 
   return (

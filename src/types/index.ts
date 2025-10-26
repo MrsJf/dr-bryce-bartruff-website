@@ -7,6 +7,11 @@ export interface Book {
   publishDate: string;
   genre: string;
   featured: boolean;
+  comingSoon?: boolean;
+  order?: number;
+  isFreeResource?: boolean;
+  downloadUrl?: string;
+  requiresSubscription?: boolean;
 }
 
 export interface Event {

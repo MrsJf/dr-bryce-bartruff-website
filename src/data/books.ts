@@ -2,6 +2,18 @@ import { Book } from '@/types';
 
 export const books: Book[] = [
   {
+    id: 'book-7',
+    title: 'I Want Your Heart: Money Talks - What\'s Yours Saying?',
+    description: 'Dr. Bartruff\'s powerful devotional explores the heart of biblical giving through 31 days of inspiring reflections. This transformative book challenges and encourages readers to discover the joy and transformation that comes from generous living. A daily devotional that will deepen your understanding of biblical generosity and strengthen your relationship with God through the practice of giving.',
+    amazonUrl: 'https://reformedfellowship.net/products/i-want-your-heart',
+    coverImage: '/images/books/book-7-cover.png',
+    publishDate: '2025-03-01',
+    genre: 'Christian Living',
+    featured: true,
+    comingSoon: true,
+    order: 1,
+  },
+  {
     id: 'book-1',
     title: 'A Cheerful Giver: Principles of Generosity in the Christian Life',
     description: 'A clear, concise resource that explores the biblical relationship between faith and finances. This practical guide helps Christians understand how God wants us to steward the resources He has entrusted to us for eternal purposes. Written from years of personal experience and professional expertise, it presents biblical teaching on money in an inspiring, accessible way.',
@@ -10,6 +22,7 @@ export const books: Book[] = [
     publishDate: '2020-01-01',
     genre: 'Christian Living',
     featured: true,
+    order: 2,
   },
   {
     id: 'book-2',
@@ -20,6 +33,7 @@ export const books: Book[] = [
     publishDate: '2020-03-01',
     genre: 'Personal Finance',
     featured: true,
+    order: 3,
   },
   {
     id: 'book-3',
@@ -29,7 +43,7 @@ export const books: Book[] = [
     coverImage: '/images/books/book-3-cover.jpg',
     publishDate: '1995-01-01',
     genre: 'Personal Development',
-    featured: true,
+    featured: false,
   },
   {
     id: 'book-4',
@@ -60,5 +74,19 @@ export const books: Book[] = [
     publishDate: '1993-05-01',
     genre: 'Church Leadership',
     featured: false,
+  },
+  {
+    id: 'workbook-1',
+    title: 'Financial Stability Made Easy',
+    description: 'A comprehensive workbook designed to help you achieve financial freedom through practical exercises, proven strategies, and step-by-step guidance. Learn how to budget effectively, eliminate debt, build savings, and create a stable financial future. Perfect for individuals and families ready to take control of their finances. FREE for newsletter subscribers through Christmas 2025!',
+    amazonUrl: '#',
+    coverImage: '/images/books/workbook-1-cover.png',
+    publishDate: '2025-01-01',
+    genre: 'Financial Workbook',
+    featured: false,
+    isFreeResource: true,
+    downloadUrl: '/downloads/financial-stability-made-easy.pdf',
+    requiresSubscription: true,
+    comingSoon: true,
   },
 ];

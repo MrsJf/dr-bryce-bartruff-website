@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
+import NewsletterSignup from '@/components/ui/NewsletterSignup';
 import { blogPosts } from '@/data/blog';
 import ToolModal from '@/components/tools/ToolModal';
 import PersonalFinanceAssessment from '@/components/tools/PersonalFinanceAssessment';
@@ -341,32 +342,8 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Newsletter Signup */}
-        <section className="py-16 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Never Miss an Update
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Subscribe to get the latest articles, insights, and updates delivered directly to your inbox.
-            </p>
-            
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </section>
+        {/* Newsletter Signup & Free Workbook */}
+        <NewsletterSignup />
 
         {/* Categories */}
         <section className="py-16">

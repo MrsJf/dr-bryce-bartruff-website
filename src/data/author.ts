@@ -11,6 +11,8 @@ export const authorInfo: AuthorInfo = {
     'Former Senior Director and COO of InFaith'
   ],
   socialMedia: {
-    facebook: 'https://www.facebook.com/InFaithFiscalFitness'
+    facebook: 'https://www.facebook.com/InFaithFiscalFitness',
+    youtube: 'https://youtube.com/@financialwisdomdaily?si=A7LKkc22tFd5yo0u',
+    instagram: 'https://www.instagram.com/financialwisdomdailyliving?igsh=NHU5dXIwOWF4eXI3'
   }
 };

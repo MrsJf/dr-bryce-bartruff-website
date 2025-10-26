@@ -37,6 +37,16 @@ export default function BookPage({ params }: BookPageProps) {
                   className="object-cover"
                   priority
                 />
+                {book.comingSoon && !book.isFreeResource && (
+                  <div className="absolute top-4 right-0 bg-gradient-to-br from-green-500 to-green-600 text-white px-6 py-3 font-bold text-base shadow-lg transform rotate-12 translate-x-2">
+                    COMING SOON
+                  </div>
+                )}
+                {book.isFreeResource && (
+                  <div className="absolute top-4 right-0 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-6 py-3 font-bold text-base shadow-lg transform rotate-12 translate-x-2">
+                    FREE FOR SUBSCRIBERS
+                  </div>
+                )}
               </div>
             </div>
 
@@ -55,22 +65,43 @@ export default function BookPage({ params }: BookPageProps) {
               </p>
               
               <div className="mb-8">
-                <p className="text-sm text-gray-500 mb-2">Published: {new Date(book.publishDate).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}</p>
+                <p className="text-sm text-gray-500 mb-2">
+                  {book.comingSoon ? 'Expected Release: ' : 'Published: '}
+                  {new Date(book.publishDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={book.amazonUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
-                >
-                  Buy on Amazon
-                </a>
+                {book.isFreeResource ? (
+                  <Link
+                    href="/blog#subscribe"
+                    className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                  >
+                    Get Your Free Copy - Subscribe Now
+                  </Link>
+                ) : book.comingSoon ? (
+                  <button
+                    disabled
+                    className="bg-gray-400 cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg text-center"
+                    title="Available soon from publisher"
+                  >
+                    Buy from Publisher
+                  </button>
+                ) : (
+                  <a
+                    href={book.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
+                  >
+                    {book.amazonUrl.includes('amazon.com') ? 'Buy on Amazon' :
+                     book.amazonUrl.includes('thriftbooks.com') ? 'Buy on Thrift Books' : 'Buy from Publisher'}
+                  </a>
+                )}
                 <a
                   href={`mailto:brycebartruff@me.com?subject=Question about ${book.title}`}
                   className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"

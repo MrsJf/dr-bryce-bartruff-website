@@ -9,7 +9,9 @@
       "Bash(git commit:*)",
       "Bash(npm run build:*)",
       "Bash(git ls-tree:*)",
-      "Bash(git rev-parse:*)"
+      "Bash(git rev-parse:*)",
+      "WebSearch",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []
