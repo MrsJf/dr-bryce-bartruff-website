@@ -76,8 +76,20 @@ export const books: Book[] = [
     featured: false,
   },
   {
-    id: 'workbook-1',
+    id: 'book-8',
     title: 'Financial Stability Made Easy',
+    description: 'A comprehensive guide to achieving financial freedom through biblical principles and practical strategies. This transformative book includes the full course material, interactive workbook, and a proven financial freedom mindset and heart change process. Discover how to eliminate debt, build wealth, and experience true financial peace through God\'s design for money management.',
+    amazonUrl: '#',
+    coverImage: '/images/books/workbook-1-cover.png',
+    publishDate: 'TBD',
+    genre: 'Personal Finance',
+    featured: true,
+    comingSoon: true,
+    order: 4,
+  },
+  {
+    id: 'workbook-1',
+    title: 'Financial Stability Made Easy: Workbook',
     description: 'A comprehensive workbook designed to help you achieve financial freedom through practical exercises, proven strategies, and step-by-step guidance. Learn how to budget effectively, eliminate debt, build savings, and create a stable financial future. Perfect for individuals and families ready to take control of their finances. FREE for newsletter subscribers through Christmas 2025!',
     amazonUrl: '#',
     coverImage: '/images/books/workbook-1-cover.png',
@@ -87,6 +99,5 @@ export const books: Book[] = [
     isFreeResource: true,
     downloadUrl: '/downloads/financial-stability-made-easy.pdf',
     requiresSubscription: true,
-    comingSoon: true,
   },
 ];
