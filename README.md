@@ -1,15 +1,15 @@
 # Dr. Bryce Bartruff Author Website
 
-> **Version 2.1.0** | Last Updated: September 9, 2025 | Status: ✅ Live & Fully Functional
+> **Version 2.3.0** | Last Updated: October 29, 2025 | Status: ✅ Live & Fully Functional
 
 Professional author website featuring interactive financial tools, books, articles, and speaking engagements.
 
 ## 🎯 Current Features
 
-### 📊 **Interactive Financial Tools Suite** (NEW!)
+### 📊 **Interactive Financial Tools Suite**
 - **Personal Finance Assessment** - 12-category financial health evaluation
 - **Complete Budget Worksheet** - Comprehensive income/expense tracking
-- **Budget Percentage Guide** - Income-based spending recommendations  
+- **Budget Percentage Guide** - Income-based spending recommendations
 - **Cash Expense Tracker** - Daily spending monitor with insights
 - **Budget Review System** - Dr. Bartruff's proven 5-column method
 - **Money-Finding Strategies** - 50+ actionable money-saving tips
@@ -17,10 +17,14 @@ Professional author website featuring interactive financial tools, books, articl
 ### 📚 **Content Library**
 - 10 authentic articles (8 financial + 2 leadership)
 - 4 featured articles including new leadership content
-- 6 published books with purchase links  
+- 9 books total:
+  - 7 published books with purchase links
+  - 2 coming soon titles (I Want Your Heart + Financial Stability Made Easy full course)
+  - 1 free workbook (Financial Stability Made Easy: Workbook)
 - Updated author bio and credentials (8 books, Senior Director & COO)
 - 6 authentic speaking topics only
 - Authentic upcoming events (House of Refuge workshops)
+- Integrated email subscription with Sender automation
 
 ## 🚀 Quick Start
 
@@ -86,6 +90,6 @@ npm run build && npm start
 
 This project is maintained with Claude Code assistance. All changes are tracked through Git commits and documented in the changelog.
 
-**Live Site:** [Deployed via Vercel]
+**Live Site:** https://brycebartruff.com (Deployed via Vercel)
 **Repository:** GitHub (auto-sync)
-**Last Deploy:** September 9, 2025 (v2.1.0)
+**Last Deploy:** October 29, 2025 (v2.3.0)

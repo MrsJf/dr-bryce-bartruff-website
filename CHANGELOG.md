@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.3.0] - 2025-10-29
+
+### 📚 Books Page Updates
+- **Added new coming soon book**: "Financial Stability Made Easy" (full course)
+  - Features comprehensive course material, workbook, and financial freedom mindset program
+  - Set as featured book with "COMING SOON" ribbon
+  - Publish date set to "TBD"
+  - Uses same cover image as workbook to maintain visual connection
+  - Description highlights full course material and heart change process
+- **Updated workbook title**: Changed from "Financial Stability Made Easy" to "Financial Stability Made Easy: Workbook"
+  - Distinguishes free workbook from full paid course coming later
+  - Maintains "FREE FOR SUBSCRIBERS" badge through December 2025
+  - Removed "comingSoon" flag from workbook (already available as free resource)
+
+### 🔗 Social Media Standardization
+- **Standardized social media links** across entire website to match footer
+  - About page "Let's Connect" section updated
+  - Contact page "Follow Me" section updated
+- **Removed outdated platforms**: Twitter and LinkedIn links removed
+- **Fixed Instagram icon**: Replaced incorrect circular icon with proper Instagram logo
+- **Consistent display**: All social sections now show:
+  - Facebook → InFaith Fiscal Fitness
+  - YouTube → Financial Wisdom Daily
+  - Instagram → Financial Wisdom Daily Living
+
+### 🎨 UI Improvements
+- **Updated icon styling**: Changed from `<span className="sr-only">` to `aria-label` for better accessibility
+- **Improved hover effects**: Consistent color transitions across all social media icons
+- **Professional appearance**: All social icons properly aligned and sized
+
+### Files Modified
+- `src/data/books.ts` - Added new book entry and updated workbook title
+- `src/app/about/page.tsx` - Standardized social media icons
+- `src/app/contact/page.tsx` - Standardized social media icons
+
+---
+
 ## [2.2.2] - 2025-10-02
 
 ### 📧 Contact Form Update
@@ -169,10 +206,12 @@ src/
 - **Total Components:** 15+
 - **Interactive Tools:** 6
 - **Content Pages:** 25+
-- **Books Featured:** 6
+- **Books Featured:** 8 (7 published + 1 workbook)
+- **Coming Soon Books:** 2 (I Want Your Heart + Financial Stability Made Easy)
 - **Articles Published:** 10 (8 financial + 2 leadership)
 - **Featured Articles:** 4
 - **Speaking Topics:** 6 (authentic only)
+- **Social Media Channels:** 3 (Facebook, YouTube, Instagram)
 - **Lines of Code:** ~3,800+
 
 ## 🛠 Technology Stack
@@ -230,8 +269,8 @@ For updates, modifications, or technical support, this project is maintained wit
 
 ---
 
-**Last Updated:** October 2, 2025
-**Current Version:** 2.2.2
+**Last Updated:** October 29, 2025
+**Current Version:** 2.3.0
 **Status:** ✅ Live and Fully Functional
 
 ---
